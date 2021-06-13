@@ -1,9 +1,11 @@
 <template>
   <v-navigation-drawer
-        v-model="showDrawer"
-        permanent
-        :expand-on-hover="expand"
+        v-model="drawer"
         app
+        width="300"
+        v-bind="$attrs"
+        :permanent="drawer"
+        expand-on-hover
       >
         <v-list>
           <v-list-item class="px-2">
@@ -53,9 +55,18 @@
 <script>
 export default {
     name: 'NavigationDrawer',
-    data: () => {
-        expand: false
-    }
+    props: {
+    },
+    computed: {
+      drawer: {
+        get () {
+          return this.$store.state.drawer
+        },
+        set (val) {
+          this.$store.commit('SET_DRAWER', val)
+        },
+      },
+    },
 }
 </script>
 

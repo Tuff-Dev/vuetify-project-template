@@ -6,7 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     // Navigation drawer
-    drawer: null,
+    drawer: true,
   },
   mutations: {
     SET_DRAWER (state, payload) {

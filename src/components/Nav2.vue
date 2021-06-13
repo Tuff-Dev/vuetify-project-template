@@ -61,10 +61,7 @@
     components: {
     },
     props: {
-      expandOnHover: {
-        type: Boolean,
-        default: false,
-      },
+
     },
 
     data: () => ({
